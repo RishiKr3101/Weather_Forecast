@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<link rel="stylesheet" href="static/css/style.css">
+<style>
+    .Nav-Brand {
+        font-size: 25px;
+
+    }
+
+    .navbar {
+        position: fixed;
+    }
+
+    #navbar-collapse {
+        position: absolute !important;
+        right: 0;
+    }
+
+    #nav-list {
+        font-size: 20px;
+    }
+</style>
+{% block css %}{% endblock %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #050505;" id="nav-bar">
+        <a class="navbar-brand" href="/">Weather Forecast</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+    
+    
+                {%block navlist %} {%endblock%}
+            </ul>
+        </div>
+    </nav>
+
+
+    {% block content %}
+    {% endblock %}
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    <div class="footer">
+        <p style="text-align:center;">Connect with us-<br />
+            <a href="" style="color:white">Facebook |</a> <a href="" style="color:white">Quora |</a> <a href=""
+                style="color:white">Instagram |</a> <a href="" style="color:white">Twitter |</a> <a href=""
+                style="color:white">LinkedIn |</a> <a href="" style="color:white">Github</a> <br /><br />
+            © Copyright 2021-Present. All Rights Reserved.<br />Rishi Kumar<br />
+            Terms of Use and Privacy Policy<br />
+            To check licence of this website visit <a href="https://www.github.com/RishiKr3101/"
+                style="color:white">github.com</a><br />
+        </p>
+    </div>
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="static/js/stars.js"></script>
+    <script src="static/js/particles.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/main.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>
