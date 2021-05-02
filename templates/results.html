@@ -61,6 +61,9 @@
     #LOGIN {
         background-color: rgba(169, 169, 169, 0.63);
     }
+    #result{
+        background-color: rgba(169, 169, 169, 0.63);
+    }
 </style>
 {% endblock %}
 
@@ -90,6 +93,40 @@
 
 
     <h1>{{content}}</h1>
+    <br>
+    <br>
+    <br>
+
+
+    <div id="result">
+
+        <h2>Time : {{time}}</h2>
+        <h2>Date : {{date}}</h2>
+        <br>
+        <br>
+        <h2>Day</h2>
+        <br>
+        <p>Temperature : {{d_temp}}</p>
+        <p>Precipitation : {{d_prep}}</p>
+        <p>UV description : {{d_uv}}</p>
+        <p>Wind Speed : {{d_ws}}</p>
+        <p>Humidity : {{d_humid}}</p>
+        <p>Phrases : {{d_phrase}}</p>
+        <p>Summary : {{d_summary}}</p>
+        <br>
+        <br>
+        <h2>Night</h2>
+        <br>
+        <p>Temperature : {{n_temp}}</p>
+        <p>Precipitation : {{n_prep}}</p>
+        <p>UV description : {{n_uv}}</p>
+        <p>Wind Speed : {{n_ws}}</p>
+        <p>Humidity : {{n_humid}}</p>
+        <p>Phrases : {{n_phrase}}</p>
+        <p>Summary : {{n_summary}}</p>
+
+
+    </div>
 
     
 
