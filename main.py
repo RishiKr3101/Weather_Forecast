@@ -5,14 +5,19 @@ import weatherfrcst as wf
 def weather(usr):
 
     d=wf.forecast(place = usr)
-    place= d['place']
-    time = d['time']
-    date = d['date']
-    d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary = d['day']['temperature'],d['day']['precipitate'],d['day']['uv_description'],d['day']['wind_speed'],d['day']['humidity'],d['day']['phrases'],d['day']['narrative'],
+    c="Network Error"
+    try:
+        place= d['place']
+        time = d['time']
+        date = d['date']
+        d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary = d['day']['temperature'],d['day']['precipitate'],d['day']['uv_description'],d['day']['wind_speed'],d['day']['humidity'],d['day']['phrases'],d['day']['narrative'],
 
-    n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase, n_summary = d['night']['temperature'],d['night']['precipitate'],d['night']['uv_description'],d['night']['wind_speed'],d['night']['humidity'],d['night']['phrases'],d['night']['narrative']
+        n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase, n_summary = d['night']['temperature'],d['night']['precipitate'],d['night']['uv_description'],d['night']['wind_speed'],d['night']['humidity'],d['night']['phrases'],d['night']['narrative']
 
-    return time, date, d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary, n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase, n_summary
+        return time, date, d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary, n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase, n_summary
+    
+    except:
+        return c, c, c , c, c, c, c, c, c, c , c, c, c, c, c, c
 
 
 
