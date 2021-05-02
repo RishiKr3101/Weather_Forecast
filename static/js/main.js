@@ -25,3 +25,9 @@ faders.forEach(fader =>{
     appearOnScroll.observe(fader);
 });
 
+function checkKey(e){
+    var enterKey = 13;
+    if (e.which == enterKey){
+        getStatuses();
+    }
+}
