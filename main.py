@@ -4,9 +4,9 @@ import weather_forecast as wf
 app = Flask(__name__)
 
 @app.route("/", methods=["POST", "GET"])
-def home():
+def search():
     if request.method == "POST":
-	    user = request.form["nm"]
+	    user = request.form["address"]
 	    return redirect(url_for("user", usr=user))
     else:
 	    return render_template("home.html")
@@ -14,7 +14,25 @@ def home():
 
 @app.route("/<usr>")
 def user(usr):
-    return render_template("results.html", content=usr)
+    time, date, d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary, n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase, n_summary=weather(usr)
+    
+    return render_template("results.html", content=usr, time = time, date= date, d_temp= d_temp , d_prep= d_prep, d_uv= d_uv, d_ws= d_ws, d_humid= d_humid, d_phrase= d_phrase, d_summary= d_summary, n_temp= n_temp , n_prep= n_prep, n_uv= n_uv, n_ws= n_ws, n_humid= n_humid, n_phrase= n_phrase, n_summary= n_summary)
+
+
+
+
+
+def weather(usr):
+
+    d=wf.forecast(place = usr)
+    time = d['time']
+    date = d['date']
+    d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary = d['day']['temperature'],d['day']['precipitate'],d['day']['uv_description'],d['day']['wind_speed'],d['day']['humidity'],d['day']['phrases'],d['day']['narrative'],
+
+    n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase, n_summary = d['night']['temperature'],d['night']['precipitate'],d['night']['uv_description'],d['night']['wind_speed'],d['night']['humidity'],d['night']['phrases'],d['night']['narrative']
+
+    return time, date, d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary, n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase, n_summary
+
 
 
 if __name__ == "__main__":

@@ -3,31 +3,29 @@ import weatherfrcst as wf
 location = "jamshedpur Jharkhand"
 
 
-
 d=wf.forecast(place = location)
 
-print(d['place'])
+
+print(d)
 
 
 
 
 
-'''{'date': '2021-05-01',
- 'day': {'humidity': None,
-         'narrative': None,
-         'phrases': None,
-         'precipitate': None,
-         'temperature': None,
-         'uv_description': None,
-         'wind_speed': None},
- 'night': {'humidity': 68,
-           'narrative': 'Generally clear. Hazy. Low 25ºC. Winds SSE at 10 to '
-                        '15 km/h.',
-           'phrases': 'Mostly Clear',
-           'precipitate': 3,
-           'temperature': 25,
-           'uv_description': 'Low',
-           'wind_speed': 10},
- 'place': 'jamshedpur Jharkhand',
- 'time': '19:29:42'}
-None'''
+'''{'place': 'jamshedpur Jharkhand', 
+'time': '13:45:26', 
+'date': '2021-05-02',
+ 'day': {'temperature': 38,
+  'precipitate': 15,
+   'uv_description': 'Very High',
+    'wind_speed': 8,
+     'humidity': 35,
+      'phrases': 'Partly Cloudy',
+       'narrative': 'Partly cloudy. Hazy. High 38ºC. Winds SSE and variable.'}, 
+ 'night': {'temperature': 26,
+  'precipitate': 5,
+   'uv_description': 'Low',
+    'wind_speed': 7,
+     'humidity': 61,
+      'phrases': 'Partly Cloudy',
+       'narrative': 'Partly cloudy. Hazy. Low 26ºC. Winds SSW and variable.'}}'''
