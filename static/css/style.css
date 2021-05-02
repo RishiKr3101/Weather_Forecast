@@ -11,11 +11,11 @@ body{
   right: 0;
   top: 10%;
   margin: 0 auto;
-  width: 500px;
+  width: 700px;
   text-align: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   #main-container {
     top: 0%;
     width: 100%;

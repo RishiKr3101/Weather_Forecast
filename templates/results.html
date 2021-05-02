@@ -32,15 +32,20 @@
     }
 
     h2 {
-        font-size: 32px !important;
+        font-size: 39px !important;
         font-weight: 250;
+        margin: 0;
+    }
+    h3 {
+        font-size: 23px !important;
+        font-weight: 150;
         margin: 0;
     }
 
     p {
-        font-size: 20px !important;
-        font-weight: 200 !important;
-        margin-bottom: 20px;
+        font-size: 26px !important;
+        font-weight: 300 !important;
+        margin-bottom: 10px;
     }
 
 
@@ -64,6 +69,10 @@
     #result{
         background-color: rgba(169, 169, 169, 0.63);
     }
+    #data
+    {
+        text-align: center;
+    }
 </style>
 {% endblock %}
 
@@ -79,6 +88,9 @@
 
 {% block navlist %}
 
+<li class="nav-item">
+    <a class="nav-link" href="/">RESET</a>
+</li>
 
 {% endblock %}
 
@@ -95,37 +107,55 @@
     <h1>{{content}}</h1>
     <br>
     <br>
+    <h3 style="background-color: rgb(164, 227, 230);">Time : {{time}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Date: {{date}}</h3>
+    <h2></h2>
     <br>
+    <marquee behavior="" direction="" bgcolor="cyan">
+        <h3 style="color: crimson;">DAY:&nbsp; {{d_summary}}</h3>
+    </marquee>
+    <marquee behavior="" direction="" bgcolor="navy blue">
+        <h3 style="color: rgb(255, 255, 255);">NIGHT: &nbsp; {{n_summary}}</h3>
+    </marquee>
+    <br>
+    
+    <br>
+    <br>
+
+    
 
 
     <div id="result">
 
-        <h2>Time : {{time}}</h2>
-        <h2>Date : {{date}}</h2>
+        <h2 style="background-color: rgba(0, 255, 255, 0.671);">Day</h2>
         <br>
-        <br>
-        <h2>Day</h2>
-        <br>
-        <p>Temperature : {{d_temp}}</p>
-        <p>Precipitation : {{d_prep}}</p>
-        <p>UV description : {{d_uv}}</p>
-        <p>Wind Speed : {{d_ws}}</p>
-        <p>Humidity : {{d_humid}}</p>
-        <p>Phrases : {{d_phrase}}</p>
-        <p>Summary : {{d_summary}}</p>
-        <br>
-        <br>
-        <h2>Night</h2>
-        <br>
-        <p>Temperature : {{n_temp}}</p>
-        <p>Precipitation : {{n_prep}}</p>
-        <p>UV description : {{n_uv}}</p>
-        <p>Wind Speed : {{n_ws}}</p>
-        <p>Humidity : {{n_humid}}</p>
-        <p>Phrases : {{n_phrase}}</p>
-        <p>Summary : {{n_summary}}</p>
+        <div id="data">
+            <p>Temperature : {{d_temp}}</p>
+            <p>Precipitation : {{d_prep}}</p>
+            <p>UV description : {{d_uv}}</p>
+            <p>Wind Speed : {{d_ws}}</p>
+            <p>Humidity : {{d_humid}}</p>
+            <p>Phrases : {{d_phrase}}</p>
+            <p style="background-color: rgba(143, 143, 143, 0.787);">Summary : {{d_summary}}</p>
+            <br>
+        </div>
+    </div>
+    <br>
+    <br>
 
-
+    <div id="result">
+        
+        <h2 style="background-color: rgba(0, 255, 255, 0.671);">Night</h2>
+        <br>
+        <div id="data">
+            <p>Temperature : {{n_temp}}</p>
+            <p>Precipitation : {{n_prep}}</p>
+            <p>UV description : {{n_uv}}</p>
+            <p>Wind Speed : {{n_ws}}</p>
+            <p>Humidity : {{n_humid}}</p>
+            <p>Phrases : {{n_phrase}}</p>
+            <p style="background-color: rgba(143, 143, 143, 0.787);">Summary : {{n_summary}}</p>
+            <br>
+        </div>
     </div>
 
     

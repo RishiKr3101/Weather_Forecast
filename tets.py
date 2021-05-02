@@ -13,6 +13,8 @@ def user(usr):
     
     return render_template("results.html", content=usr, time = time, date= date, d_temp= d_temp , d_prep= d_prep, d_uv= d_uv, d_ws= d_ws, d_humid= d_humid, d_phrase= d_phrase, d_summary= d_summary, n_temp= n_temp , n_prep= n_prep, n_uv= n_uv, n_ws= n_ws, n_humid= n_humid, n_phrase= n_phrase, n_summary= n_summary)
 
+
+
 '''{'place': 'jamshedpur Jharkhand', 
 'time': '13:45:26', 
 'date': '2021-05-02',

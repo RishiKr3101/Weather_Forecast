@@ -31,9 +31,11 @@ def search():
 
 @app.route("/<usr>")
 def user(usr):
-    time, date, d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary, n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase, n_summary=weather(usr)
+    time, date, d_temp , d_prep, d_uv, d_ws, d_humid, d_phrase, d_summary, n_temp , n_prep, n_uv, n_ws, n_humid, n_phrase,n_summary =weather(usr)
     
     return render_template("results.html", content=usr, time = time, date= date, d_temp= d_temp , d_prep= d_prep, d_uv= d_uv, d_ws= d_ws, d_humid= d_humid, d_phrase= d_phrase, d_summary= d_summary, n_temp= n_temp , n_prep= n_prep, n_uv= n_uv, n_ws= n_ws, n_humid= n_humid, n_phrase= n_phrase, n_summary= n_summary)
+    
+    
 
 
 
